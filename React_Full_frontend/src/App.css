@@ -1,0 +1,796 @@
+/* ------------------------------------------- */
+/* GLOBAL THEME                                */
+/* ------------------------------------------- */
+
+:root {
+  --bg: #f0f4ff;
+  --card: #ffffff;
+  --text: #190707;
+  --muted: #6faa26;
+  --accent: #d74012;
+}
+
+/* PAGE WRAPPER */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+/* ------------------------------------------- */
+/* HEADER / NAVBAR */
+/* ------------------------------------------- */
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  background: var(--card);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.brand {
+  font-weight: 800;
+  color: var(--accent);
+  font-size: 22px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  padding: 8px 18px;
+  border-radius: 20px;
+  color: var(--muted);
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background: #e0e7ff;
+  color: var(--accent);
+}
+
+/* CONTENT WRAPPER */
+.app-main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* ------------------------------------------- */
+/* HERO BANNER (LIKE YOUR SCREENSHOT) */
+/* ------------------------------------------- */
+
+.hero-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.recharge-title {
+  font-size: 38px;
+  margin: 0 0 10px;
+  color: #11e7d9;
+  font-weight: 800;
+}
+
+.recharge-sub {
+  font-size: 18px;
+  color: #444;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* PERFECT SMALL BANNER IMAGE */
+.hero-banner-img {
+  width: 340px;
+  height: auto;
+  border-radius: 18px;
+  object-fit: contain;
+  padding: 10px;
+  background: #fff;
+}
+
+/* ------------------------------------------- */
+/* BUTTON STYLES */
+/* ------------------------------------------- */
+
+.primary-button,
+.hero-btn,
+.apply-btn {
+  background: linear-gradient(135deg, #c71414, #2563eb);
+  color: #fff;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 14px rgba(79,70,229,0.4);
+}
+
+.primary-button:hover,
+.hero-btn:hover,
+.apply-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(216, 122, 13, 0.7);
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* ------------------------------------------- */
+/* FORM CARD */
+/* ------------------------------------------- */
+
+.form-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(12,28,58,0.08);
+  max-width: 450px;
+}
+
+.section-heading {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.recharge-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recharge-form input,
+.recharge-form select {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d6dfff;
+  background: #f9faff;
+}
+
+/* ------------------------------------------- */
+/* PLANS PAGE */
+/* ------------------------------------------- */
+
+.plans-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.plans-tabs {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 15px;
+  overflow-x: auto;
+}
+
+.plan-tab {
+  background: none;
+  border: none;
+  padding: 8px;
+  color: var(--muted);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.plan-tab.active {
+  color: var(--accent);
+  border-bottom: 3px solid var(--accent);
+}
+
+.plan-box {
+  background: #fff;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.plan-price {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+/* ------------------------------------------- */
+/* LOGIN */
+/* ------------------------------------------- */
+
+.login-page {
+  display: grid;
+  place-items: center;
+  min-height: 70vh;
+}
+
+.login-card {
+  background: #fff;
+  padding: 26px;
+  width: min(420px, 95%);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.login-card h1 {
+  text-align: center;
+  color: var(--accent);
+}
+
+/* ------------------------------------------- */
+/* DASHBOARD */
+/* ------------------------------------------- */
+
+.dashboard-card {
+  padding: 22px;
+  background: #fff;
+  border-radius: 16px;
+  margin-top: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* ------------------------------------------- */
+/* FOOTER */
+/* ------------------------------------------- */
+
+.footer {
+  margin-top: 30px;
+  padding: 26px;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* LOGIN FORM FIX */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;            /* Space between inputs */
+  width: 100%;
+}
+
+.login-card label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.login-card input {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d6dfff;
+  background: #f9faff;
+  width: 100%;
+}
+/* LOGIN FORM FIX */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;            /* Space between inputs */
+  width: 100%;
+}
+
+.login-card label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.login-card input {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d6dfff;
+  background: #f9faff;
+  width: 100%;
+}
+/* LOGIN FORM FIX */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;            /* Space between inputs */
+  width: 100%;
+}
+
+.login-card label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.login-card input {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d6dfff;
+  background: #f9faff;
+  width: 100%;
+}
+/* =============================== */
+/* CONTACT PAGE FIXED STYLING      */
+/* =============================== */
+
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 20px;
+  width: 100%;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 18px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.contact-form label {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #d6dfff;
+  background: #f9faff;
+  font-size: 15px;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact-form button {
+  margin-top: 10px;
+}
+/* =============================== */
+/* CENTER DASHBOARD SECTION        */
+/* =============================== */
+
+.dashboard-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* ❤️ THIS centers all cards */
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;      /* Center heading & subtitle */
+}
+
+.dashboard-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.dashboard-sub {
+  color: #444;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+/* Dashboard cards centered with proper width */
+.dashboard-card {
+  background: #fff;
+  padding: 22px;
+  margin-top: 12px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 600px;     /* Same width as Contact card */
+}
+/* =============================== */
+/* TWO COLUMN HOME PAGE LAYOUT     */
+/* =============================== */
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;  /* Left is small, right expands fully */
+  gap: 25px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+/* Right side dashboard full width */
+.dashboard-side {
+  width: 100%;
+}
+
+/* Center dashboard text nicely */
+.dashboard-title,
+.dashboard-sub {
+  text-align: center;
+}
+
+/* Make dashboard cards centered & clean */
+.dashboard-card {
+  width: 100%;
+  max-width: 650px;
+  margin: 15px auto;
+}
+/* ======================= */
+/*   ADMIN DASHBOARD       */
+/* ======================= */
+
+.admin-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.admin-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* STATS CARDS */
+.admin-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 20px;
+  width: 200px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.stat-card h3 {
+  font-size: 28px;
+  color: var(--accent);
+  margin: 0;
+}
+
+.stat-card p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+/* CHARTS */
+.charts-row {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.chart-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  width: 450px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.chart-card h3 {
+  margin-bottom: 10px;
+}
+
+/* RECENT LIST */
+.recent-card {
+  background: #fff;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.recent-card h2 {
+  margin-bottom: 12px;
+}
+
+.recent-list {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.recent-list span {
+  color: #888;
+}
+
+.empty {
+  text-align: center;
+  color: #888;
+}
+/* ------------ CONTACT CARD CENTER ------------- */
+.contact-center {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ------------ CONTACT CARD BOX ------------- */
+.contact-info-card {
+  background: #ffffff;
+  padding: 30px;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: 0.35s ease;
+}
+
+/* Hover Animation */
+.contact-info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(215,64,18,0.35);
+}
+
+/* Title */
+.contact-title {
+  margin-bottom: 20px;
+  color: #d74012;
+  font-weight: 800;
+  font-size: 26px;
+}
+
+/* Paragraph styling */
+.contact-info-card p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+/* ----------------------- HISTORY PAGE ----------------------- */
+.history-page {
+  padding: 30px;
+}
+
+.history-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #d74012;
+  margin-bottom: 20px;
+}
+
+.history-empty {
+  font-size: 18px;
+  color: #555;
+}
+
+/* LIST LAYOUT */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* CARD STYLE */
+.history-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+  border-left: 6px solid #d74012;
+}
+
+/* Hover Effect */
+.history-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(215, 64, 18, 0.25);
+}
+
+/* LEFT SIDE (PLAN INFO) */
+.history-plan h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.history-plan p {
+  margin: 4px 0;
+  color: #444;
+}
+
+/* RIGHT SIDE (DATE) */
+.history-date {
+  text-align: right;
+  color: #333;
+  font-size: 15px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 600px) {
+  .history-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}
+/* === 1️⃣ TOP BANNER === */
+.top-banner-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.top-banner-image {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 22px;
+  height: 400px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+  animation: fadeIn 0.8s ease;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === 2️⃣ ENTER DETAILS FORM === */
+.form-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  margin-top: 25px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+/* === Buttons === */
+.primary-button {
+  background: linear-gradient(135deg, #c71414, #2563eb);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.primary-button:hover {
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.5);
+  transform: translateY(-3px);
+}
+
+/* === 3️⃣ DASHBOARD SECTION === */
+.dashboard-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.dashboard-title {
+  font-size: 26px;
+  color: #d74012;
+  font-weight: 800;
+}
+
+.dashboard-sub {
+  color: #333;
+  margin-top: 8px;
+}
+/* ============================= */
+/*    HERO BANNER (BIGGER SIZE)  */
+/* ============================= */
+
+.hero-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 50px 40px;        /* Increased padding */
+  min-height: 360px;         /* 🔥 Increase height here */
+  display: flex;
+  align-items: center;       /* Vertically center items */
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  margin-bottom: 40px;
+}
+
+/* Left Section */
+.hero-left {
+  flex: 1;
+}
+
+/* Title Colors */
+.recharge-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #00e4e4;
+}
+
+/* Right Section Image */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-banner-img {
+  width: 380px;            /* Increase image size if needed */
+  height: auto;
+  object-fit: contain;
+}
+/* Recharge section centered */
+.recharge-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+}
+.form-card {
+  background: var(--card);
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  width: 100%;            /* Increase or decrease here */
+  max-width: 1000px;      /* Prevent excessive stretch */
+  margin: 0 auto;        /* Center it */
+  text-align: left;
+}
+
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-top: -6px;
+  margin-bottom: 4px;
+}
+
+
+

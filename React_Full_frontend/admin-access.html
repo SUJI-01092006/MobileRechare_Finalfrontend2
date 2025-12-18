@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Access Helper</title>
+</head>
+<body>
+    <h2>Set Admin Access</h2>
+    <p>Click the button below to set admin role in localStorage:</p>
+    <button onclick="setAdminRole()">Set Admin Role</button>
+    <button onclick="checkRole()">Check Current Role</button>
+    
+    <script>
+        function setAdminRole() {
+            localStorage.setItem('loggedIn', 'true');
+            localStorage.setItem('userRole', 'admin');
+            localStorage.setItem('currentUser', JSON.stringify({
+                id: 'admin123',
+                name: 'Admin User',
+                email: 'admin@test.com',
+                role: 'admin'
+            }));
+            alert('Admin role set! You can now access /admin');
+        }
+        
+        function checkRole() {
+            const role = localStorage.getItem('userRole');
+            const loggedIn = localStorage.getItem('loggedIn');
+            alert(`Logged in: ${loggedIn}, Role: ${role}`);
+        }
+    </script>
+</body>
+</html>
