@@ -8,3 +8,12 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+  - type: web
+    name: mobilerechare-frontend
+    env: static
+    buildCommand: npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
