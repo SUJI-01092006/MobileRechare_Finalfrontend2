@@ -50,7 +50,20 @@ export default function Register() {
       
       if (data.success) {
         alert(`${form.userType === 'admin' ? 'Admin' : 'User'} Account Created Successfully!`);
-        navigate("/login");
+        
+        // Auto-login admin after registration
+        if (form.userType === 'admin') {
+          localStorage.setItem("loggedIn", "true");
+          localStorage.setItem("userRole", "admin");
+          localStorage.setItem("currentUser", JSON.stringify({
+            name: form.name,
+            email: form.email,
+            role: "admin"
+          }));
+          window.location.href = "/admin";
+        } else {
+          navigate("/login");
+        }
       } else {
         alert(data.message || 'Registration failed. Please try again.');
       }
